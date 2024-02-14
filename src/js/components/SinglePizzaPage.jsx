@@ -32,7 +32,7 @@ export default function SinglePizzaPage() {
                 Weboldal: <a href={item.hostname} target="_blank">{item.hostname}</a><br />
                 Hely: {item.location}<br />
                 Ár: {item.price}<br />
-                Minimum északa: {item.minimum_nights}<br />
+                Minimum éjszakák: {item.minimum_nights}<br />
                 {loggedIn ? <>
                     <Link to={`/${item.id}/edit`}>
                         <Button variant="primary" style={{ marginRight: '10px' }}>
