@@ -37,7 +37,10 @@ export default function DeletePizzaPage() {
             dispatch(deletePizzaLocal(pizza.id));
             setNavigateAway(true);
           } catch (error) {
-            alert(error);
+            if(error.response.status === 404){
+              alert("A szállás az API szerint nem létezik... erről nem lehetek sokat.\nNézd meg a konzolt több részletért.");
+            }
+            console.log(error);
           }
         }} style={{ marginRight: '10px' }}>Törlés</button>
         <button className="btn btn-secondary" onClick={() => window.history.back()}>Mégse</button>

@@ -41,6 +41,9 @@ export default function UpdatePizzaPage() {
             setNavigateAway(true);
         } catch (error) {
             console.log(error);
+            if(error.response.status === 404){
+                alert("A szállás az API szerint nem létezik... erről nem lehetek sokat.\nNézd meg a konzolt több részletért.");
+            }
         }
     };
 

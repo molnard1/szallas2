@@ -11,6 +11,7 @@ import { Provider, useDispatch } from "react-redux";
 import { Spinner } from "react-bootstrap";
 import axios from "axios";
 import LoginPage from "./components/LoginPage";
+import SinglePizzaPage from "./components/SinglePizzaPage";
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
 			{
 				path: "/create",
 				element: <CreatePizzaPage />,
+			},
+			{
+				path: "/:id",
+				element: <SinglePizzaPage />,
 			},
 			{
 				path: "/:id/edit",
